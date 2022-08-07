@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4026047734741148114}
   - component: {fileID: 4026047734741148115}
   m_Layer: 0
-  m_Name: SingleUnitPlayer
+  m_Name: SingleUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a86c2597066112b42b75a616ccde3cb4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,5 +113,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 80
   m_CollisionDetection: 0

@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 7964907}
   - component: {fileID: 7964906}
   - component: {fileID: 7964905}
+  - component: {fileID: 7964908}
   m_Layer: 5
   m_Name: BETA3DropDown
   m_TagString: Untagged
@@ -315,7 +316,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7964908}
+        m_TargetAssemblyTypeName: SetLoadOut, Assembly-CSharp
+        m_MethodName: SetUnitToLoadOut
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: B3
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &7964906
 MonoBehaviour:
@@ -355,6 +368,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7964903}
   m_CullTransparentMesh: 1
+--- !u!114 &7964908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cfa9dd14de83d48a07da8b75f3ce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDrop: {fileID: 7964905}
 --- !u!1 &19826299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,6 +1434,7 @@ GameObject:
   - component: {fileID: 183293645}
   - component: {fileID: 183293644}
   - component: {fileID: 183293643}
+  - component: {fileID: 183293646}
   m_Layer: 5
   m_Name: ALPHA3DropDown
   m_TagString: Untagged
@@ -1435,7 +1462,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -258, y: -104}
+  m_AnchoredPosition: {x: -258, y: -47}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &183293643
@@ -1500,7 +1527,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 183293646}
+        m_TargetAssemblyTypeName: SetLoadOut, Assembly-CSharp
+        m_MethodName: SetUnitToLoadOut
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: A3
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &183293644
 MonoBehaviour:
@@ -1540,6 +1579,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183293641}
   m_CullTransparentMesh: 1
+--- !u!114 &183293646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183293641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cfa9dd14de83d48a07da8b75f3ce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDrop: {fileID: 183293643}
 --- !u!1 &192793478
 GameObject:
   m_ObjectHideFlags: 0
@@ -3366,6 +3418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -5691,6 +5744,7 @@ GameObject:
   - component: {fileID: 623918732}
   - component: {fileID: 623918731}
   - component: {fileID: 623918730}
+  - component: {fileID: 623918733}
   m_Layer: 5
   m_Name: ALPHA4DropDown
   m_TagString: Untagged
@@ -5718,7 +5772,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -258, y: -46}
+  m_AnchoredPosition: {x: -258, y: -100}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &623918730
@@ -5783,7 +5837,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 623918733}
+        m_TargetAssemblyTypeName: SetLoadOut, Assembly-CSharp
+        m_MethodName: SetUnitToLoadOut
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: A4
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &623918731
 MonoBehaviour:
@@ -5823,6 +5889,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623918728}
   m_CullTransparentMesh: 1
+--- !u!114 &623918733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623918728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cfa9dd14de83d48a07da8b75f3ce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDrop: {fileID: 623918730}
 --- !u!1 &645961751
 GameObject:
   m_ObjectHideFlags: 0
@@ -8281,6 +8360,7 @@ GameObject:
   - component: {fileID: 1028292832}
   - component: {fileID: 1028292831}
   - component: {fileID: 1028292830}
+  - component: {fileID: 1028292833}
   m_Layer: 5
   m_Name: BETA1DropDown
   m_TagString: Untagged
@@ -8308,7 +8388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49, y: 3}
+  m_AnchoredPosition: {x: 49, y: 56}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028292830
@@ -8373,7 +8453,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1028292833}
+        m_TargetAssemblyTypeName: SetLoadOut, Assembly-CSharp
+        m_MethodName: SetUnitToLoadOut
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: B1
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1028292831
 MonoBehaviour:
@@ -8413,6 +8505,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028292828}
   m_CullTransparentMesh: 1
+--- !u!114 &1028292833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028292828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cfa9dd14de83d48a07da8b75f3ce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDrop: {fileID: 1028292830}
 --- !u!1 &1030112664
 GameObject:
   m_ObjectHideFlags: 0
@@ -8552,6 +8657,7 @@ GameObject:
   - component: {fileID: 1070317571}
   - component: {fileID: 1070317570}
   - component: {fileID: 1070317569}
+  - component: {fileID: 1070317572}
   m_Layer: 5
   m_Name: ALPHA1DropDown
   m_TagString: Untagged
@@ -8579,7 +8685,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -258, y: 61}
+  m_AnchoredPosition: {x: -258, y: 58}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1070317569
@@ -8644,7 +8750,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1070317572}
+        m_TargetAssemblyTypeName: SetLoadOut, Assembly-CSharp
+        m_MethodName: SetUnitToLoadOut
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: A1
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1070317570
 MonoBehaviour:
@@ -8684,6 +8802,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070317567}
   m_CullTransparentMesh: 1
+--- !u!114 &1070317572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070317567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cfa9dd14de83d48a07da8b75f3ce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDrop: {fileID: 1070317569}
 --- !u!1 &1075419944
 GameObject:
   m_ObjectHideFlags: 0
@@ -8907,6 +9038,7 @@ GameObject:
   - component: {fileID: 1118915539}
   - component: {fileID: 1118915538}
   - component: {fileID: 1118915537}
+  - component: {fileID: 1118915540}
   m_Layer: 5
   m_Name: BETA4DropDown
   m_TagString: Untagged
@@ -8999,7 +9131,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118915540}
+        m_TargetAssemblyTypeName: SetLoadOut, Assembly-CSharp
+        m_MethodName: SetUnitToLoadOut
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: B4
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1118915538
 MonoBehaviour:
@@ -9039,6 +9183,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118915535}
   m_CullTransparentMesh: 1
+--- !u!114 &1118915540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118915535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cfa9dd14de83d48a07da8b75f3ce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDrop: {fileID: 1118915537}
 --- !u!1 &1126168263
 GameObject:
   m_ObjectHideFlags: 0
@@ -10006,6 +10163,7 @@ GameObject:
   - component: {fileID: 1304950074}
   - component: {fileID: 1304950073}
   - component: {fileID: 1304950072}
+  - component: {fileID: 1304950075}
   m_Layer: 5
   m_Name: ALPHA2DropDown
   m_TagString: Untagged
@@ -10098,7 +10256,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1304950075}
+        m_TargetAssemblyTypeName: SetLoadOut, Assembly-CSharp
+        m_MethodName: SetUnitToLoadOut
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: A2
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1304950073
 MonoBehaviour:
@@ -10138,6 +10308,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304950070}
   m_CullTransparentMesh: 1
+--- !u!114 &1304950075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304950070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cfa9dd14de83d48a07da8b75f3ce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDrop: {fileID: 1304950072}
 --- !u!1 &1312166149
 GameObject:
   m_ObjectHideFlags: 0
@@ -13706,6 +13889,7 @@ GameObject:
   - component: {fileID: 1813499977}
   - component: {fileID: 1813499976}
   - component: {fileID: 1813499975}
+  - component: {fileID: 1813499978}
   m_Layer: 5
   m_Name: BETA2DropDown
   m_TagString: Untagged
@@ -13733,7 +13917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49, y: 61}
+  m_AnchoredPosition: {x: 49, y: 6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1813499975
@@ -13798,7 +13982,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1813499978}
+        m_TargetAssemblyTypeName: SetLoadOut, Assembly-CSharp
+        m_MethodName: SetUnitToLoadOut
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: B2
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1813499976
 MonoBehaviour:
@@ -13838,6 +14034,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1813499973}
   m_CullTransparentMesh: 1
+--- !u!114 &1813499978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813499973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cfa9dd14de83d48a07da8b75f3ce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDrop: {fileID: 1813499975}
 --- !u!1 &1814546915
 GameObject:
   m_ObjectHideFlags: 0
