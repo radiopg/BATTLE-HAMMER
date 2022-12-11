@@ -6,16 +6,17 @@ public class HumanUnitScript : MonoBehaviour
 {
 
 
-    float moveToX = 0.0f;
-    float moveToY = 0.0f;
-    float moveToZ = 0.0f;
+    float moveToX;
+    float moveToY;
+    float moveToZ;
 
-    float speed = 1.0f;
+    float speed = 1.5f;
 
     // Start is called before the first frame update
     void Start()
     {
-    
+        moveToX = transform.position.x;
+        moveToZ = transform.position.z;
     }
 
     // Update is called once per frame
@@ -24,14 +25,17 @@ public class HumanUnitScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             ShootRay();
+            transform.LookAt(new Vector3(moveToX, 0.54f, moveToZ));
         }
         MoveUnit();
     }
 
     void MoveUnit()
     {
-        transform.LookAt(new Vector3(moveToX, moveToY, moveToZ));
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        if(!(transform.position.x == moveToX && transform.position.z == moveToZ))
+        {
+            transform.position -= (transform.position - new Vector3(moveToX, 0.54f, moveToZ)).normalized * speed * Time.deltaTime;
+        }
     }
 
     void ShootBullets()
@@ -47,7 +51,6 @@ public class HumanUnitScript : MonoBehaviour
         if(Physics.Raycast(rayOrigin, out hitInfo))
         {
             moveToX = hitInfo.point.x;
-            moveToY = hitInfo.point.y + 0.54f;
             moveToZ = hitInfo.point.z;
         }
         
