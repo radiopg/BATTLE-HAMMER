@@ -31,4 +31,9 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+
+    public void HighScoresTable()
+    {
+        SceneManager.LoadScene(3);
+    }
 }
