@@ -19,7 +19,6 @@ public class DataPersistScript : MonoBehaviour
 
     public static DataPersistScript Instance;
 
-
     public string[] loadout1 = new string[4];
     public string[] loadout2 = new string[4];
 
@@ -31,7 +30,6 @@ public class DataPersistScript : MonoBehaviour
     public string loadoutB2;
     public string loadoutB3;
     public string loadoutB4;
-
 
     public int[] highscoresarray = new int[5];
 
@@ -89,12 +87,7 @@ public class DataPersistScript : MonoBehaviour
 
         string json = JsonUtility.ToJson(data);
 
-<<<<<<< HEAD
-        File.WriteAllText(Application.persistentDataPath + "/savefileLoadOut.json", json);
-=======
-<<<<<<< Updated upstream
-        File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
-=======
+
         File.WriteAllText(Application.persistentDataPath + "/savefileLoadOut.json", json);
     }
 
@@ -110,22 +103,7 @@ public class DataPersistScript : MonoBehaviour
         string json = JsonUtility.ToJson(dataHighScore);
 
         File.WriteAllText(Application.persistentDataPath + "/savefileHighScores.json", json);
->>>>>>> Stashed changes
->>>>>>> DATA-PERSISTENCE
-    }
 
-    public void SaveScore()
-    {
-        SaveData dataHighScore = new SaveData();
-        dataHighScore.highscore1 = highscore1;
-        dataHighScore.highscore1 = highscore2;
-        dataHighScore.highscore1 = highscore3;
-        dataHighScore.highscore1 = highscore4;
-        dataHighScore.highscore1 = highscore5;
-
-        string json = JsonUtility.ToJson(dataHighScore);
-
-        File.WriteAllText(Application.persistentDataPath + "/savefileHighScores.json", json);
     }
 
     public void LoadHighScoreData()
@@ -147,13 +125,13 @@ public class DataPersistScript : MonoBehaviour
             highscoresarray[2] = highscore3;
             highscoresarray[3] = highscore4;
             highscoresarray[4] = highscore5;
+
+
         }
     }
 
-    public void DeleteJsonFile()
+    public void ResetHighScores()
     {
-        string path = Application.persistentDataPath + "/savefileHighScores.json";
-        File.Delete(path);
 
         for(int i = 0; i < highscoresarray.Length; i++)
         {
@@ -165,6 +143,8 @@ public class DataPersistScript : MonoBehaviour
         highscore3 = 999999999;
         highscore4 = 999999999;
         highscore5 = 999999999;
+
+        SaveScore();
 
     }
 }
