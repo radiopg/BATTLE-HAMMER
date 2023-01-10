@@ -73,7 +73,25 @@ public class DataPersistScript : MonoBehaviour
 
         string json = JsonUtility.ToJson(data);
 
+<<<<<<< Updated upstream
         File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
+=======
+        File.WriteAllText(Application.persistentDataPath + "/savefileLoadOut.json", json);
+    }
+
+    public void SaveScore()
+    {
+        SaveData dataHighScore = new SaveData();
+        dataHighScore.highscore1 = highscore1;
+        dataHighScore.highscore2 = highscore2;
+        dataHighScore.highscore3 = highscore3;
+        dataHighScore.highscore4 = highscore4;
+        dataHighScore.highscore5 = highscore5;
+
+        string json = JsonUtility.ToJson(dataHighScore);
+
+        File.WriteAllText(Application.persistentDataPath + "/savefileHighScores.json", json);
+>>>>>>> Stashed changes
     }
 
     public void LoadData()
