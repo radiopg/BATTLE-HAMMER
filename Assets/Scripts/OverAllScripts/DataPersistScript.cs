@@ -31,6 +31,14 @@ public class DataPersistScript : MonoBehaviour
     public string loadoutB3;
     public string loadoutB4;
 
+    public int[] highscoresarray = new int[5];
+
+    public int highscore1;
+    public int highscore2;
+    public int highscore3;
+    public int highscore4;
+    public int highscore5;
+
     private void Awake()
     {
 
@@ -56,6 +64,12 @@ public class DataPersistScript : MonoBehaviour
         public string loadoutB3;
         public string loadoutB4;
 
+        public int highscore1;
+        public int highscore2;
+        public int highscore3;
+        public int highscore4;
+        public int highscore5;
+
     }
 
     public void SaveLoadOut()
@@ -73,9 +87,7 @@ public class DataPersistScript : MonoBehaviour
 
         string json = JsonUtility.ToJson(data);
 
-<<<<<<< Updated upstream
-        File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
-=======
+
         File.WriteAllText(Application.persistentDataPath + "/savefileLoadOut.json", json);
     }
 
@@ -91,60 +103,48 @@ public class DataPersistScript : MonoBehaviour
         string json = JsonUtility.ToJson(dataHighScore);
 
         File.WriteAllText(Application.persistentDataPath + "/savefileHighScores.json", json);
->>>>>>> Stashed changes
+
     }
 
-    public void LoadData()
+    public void LoadHighScoreData()
     {
-        string path = Application.persistentDataPath + "/savefile.json";
+        string path = Application.persistentDataPath + "/savefileHighScores.json";
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
-            SaveData data = JsonUtility.FromJson<SaveData>(json);
+            SaveData dataHighScore = JsonUtility.FromJson<SaveData>(json);
 
-            loadoutA1 = data.loadoutA1;
-            loadoutA2 = data.loadoutA2;
-            loadoutA3 = data.loadoutA3;
-            loadoutA4 = data.loadoutA4;
+            highscore1 = dataHighScore.highscore1;
+            highscore2 = dataHighScore.highscore2;
+            highscore3 = dataHighScore.highscore3;
+            highscore4 = dataHighScore.highscore4;
+            highscore5 = dataHighScore.highscore5;
 
-            loadoutB1 = data.loadoutB1;
-            loadoutB2 = data.loadoutB2;
-            loadoutB3 = data.loadoutB3;
-            loadoutB4 = data.loadoutB4;
+            highscoresarray[0] = highscore1;
+            highscoresarray[1] = highscore2;
+            highscoresarray[2] = highscore3;
+            highscoresarray[3] = highscore4;
+            highscoresarray[4] = highscore5;
 
-            loadout1[0] = loadoutA1;
-            loadout1[1] = loadoutA2;
-            loadout1[2] = loadoutA3;
-            loadout1[3] = loadoutA4;
 
-            loadout2[0] = loadoutB1;
-            loadout2[1] = loadoutB2;
-            loadout2[2] = loadoutB3;
-            loadout2[3] = loadoutB4;
         }
     }
 
-    public void DeleteJsonFile()
+    public void ResetHighScores()
     {
-        string path = Application.persistentDataPath + "/savefile.json";
-        File.Delete(path);
 
-        for(int i = 0; i < loadout1.Length; i++)
+        for(int i = 0; i < highscoresarray.Length; i++)
         {
-            loadout1[i] = null;
-            loadout2[i] = null;
+            highscoresarray[i] = 999999999;
         }
 
-        loadoutA1 = null;
-        loadoutA2 = null;
-        loadoutA3 = null;
-        loadoutA4 = null;
+        highscore1 = 999999999;
+        highscore2 = 999999999;
+        highscore3 = 999999999;
+        highscore4 = 999999999;
+        highscore5 = 999999999;
 
-        loadoutB1 = null;
-        loadoutB2 = null;
-        loadoutB3 = null;
-        loadoutB4 = null;
-
+        SaveScore();
 
     }
 }
