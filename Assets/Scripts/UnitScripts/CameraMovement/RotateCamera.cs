@@ -6,7 +6,7 @@ public class RotateCamera : MonoBehaviour
 {
 
     public GameObject unit;
-    public float sensitivity = 20;
+    public float sensitivity = 100.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +27,6 @@ public class RotateCamera : MonoBehaviour
         {
             transform.RotateAround(unit.transform.position, Vector3.up, -1 * Time.deltaTime * sensitivity);
         }
-        //transform.localRotation = Quaternion.Euler(-turn.y, turn.x, 0);
+        
     }
 }

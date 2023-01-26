@@ -12,6 +12,10 @@ public class Ally : HumanUnitScript
 
     GameObject cameraVar;
 
+    public GameObject targetLocAndRot;
+    public Vector3 directionTarget;
+    private Quaternion lookRotation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +31,16 @@ public class Ally : HumanUnitScript
         if (Input.GetMouseButtonDown(0))
         {
             ShootRay();
-            transform.LookAt(new Vector3(moveToX, 0.54f, moveToZ));
+            
+            targetLocAndRot.transform.LookAt(new Vector3(moveToX, 0.54f, moveToZ));
+            targetLocAndRot.transform.position = new Vector3(moveToX, 0.54f, moveToZ);
+
+            directionTarget = (targetLocAndRot.transform.position - transform.position).normalized;
+            lookRotation = Quaternion.LookRotation(directionTarget);
+
         }
+        
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10);
         MoveAllyUnit();
     }
 
@@ -52,6 +64,7 @@ public class Ally : HumanUnitScript
         if (!(transform.position.x == moveToX && transform.position.z == moveToZ))
         {
             transform.position -= (transform.position - new Vector3(moveToX, 0.54f, moveToZ)).normalized * speed * Time.deltaTime;
+            
             MoveCamera();
         }
         
@@ -73,5 +86,6 @@ public class Ally : HumanUnitScript
     void MoveCamera()
     {
         //move camera when ally moves
+        cameraVar.transform.position -= (transform.position - new Vector3(moveToX, 0.54f, moveToZ)).normalized * speed * Time.deltaTime;
     }
 }
