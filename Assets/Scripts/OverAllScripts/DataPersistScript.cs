@@ -74,6 +74,7 @@ public class DataPersistScript : MonoBehaviour
 
     public void SaveLoadOut()
     {
+        /*
         SaveData data = new SaveData();
         data.loadoutA1 = loadout1[0];
         data.loadoutA2 = loadout1[1];
@@ -89,6 +90,17 @@ public class DataPersistScript : MonoBehaviour
 
 
         File.WriteAllText(Application.persistentDataPath + "/savefileLoadOut.json", json);
+        */
+
+        loadoutA1 = loadout1[0];
+        loadoutA2 = loadout1[1];
+        loadoutA3 = loadout1[2];
+        loadoutA4 = loadout1[3];
+
+        loadoutB1 = loadout2[0];
+        loadoutB2 = loadout2[1];
+        loadoutB3 = loadout2[2];
+        loadoutB4 = loadout2[3];
     }
 
     public void SaveScore()

@@ -16,19 +16,24 @@ public class Ally : HumanUnitScript
     public Vector3 directionTarget;
     private Quaternion lookRotation;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
         moveToX = gameObject.transform.position.x;
         moveToZ = gameObject.transform.position.z;
         cameraVar = GameObject.Find("Main Camera");
+        
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+
+
+        if (Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.Tab))
         {
             ShootRay();
             
